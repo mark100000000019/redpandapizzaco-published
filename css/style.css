@@ -1,6 +1,6 @@
 html {
     max-width: 70ch;
-    padding: 3em 1em;
+    padding: 1em 1em;
     margin: auto;
     line-height: 1.75;
     font-size: 1.25em;
@@ -12,14 +12,14 @@ h3,
 h4,
 h5,
 h6 {
-    margin: 3em 0 1em;
+    font-size: 1.5em;
+    margin: 1em 0 1em;
 }
 
 p,
 ul,
 ol {
     margin-bottom: 2em;
-    color: #1d1d1d;
 }
 
 body,
@@ -37,4 +37,30 @@ textarea,
 select {
     font-family: Seravek, 'Gill Sans Nova', Ubuntu, Calibri, 'DejaVu Sans', source-sans-pro, sans-serif;
     font-weight: 300;
+}
+
+:root {
+    --background-color: #ffffff;
+    --text-color: #000000;
+    --button-bg: #e0e0e0;
+    --button-text: #000000;
+}
+
+@media (prefers-color-scheme: dark) {
+    :root {
+        --background-color: #121212;
+        --text-color: #ffffff;
+        --button-bg: #333333;
+        --button-text: #ffffff;
+    }
+}
+
+body {
+    background-color: var(--background-color);
+    color: var(--text-color);
+}
+
+button {
+    background-color: var(--button-bg);
+    color: var(--button-text);
 }
